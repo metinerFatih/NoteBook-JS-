@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSApplication</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-secondary p-3">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">
+                <h2>Not Defterim</h2>
+            </a>
+        </div>
+    </nav>
+    <main class="p-4 mt-2">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div>
+                    <button id="btnYeni" class="btn btn-primary btn-lg" style="--bs-btn-padding-x: 2.9rem;">Yeni</button>
+                </div>
+                <div class="mt-3">
+                    <div class="list-group" id="lstNotlar">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <form id="frmNot" action="#">
+                    <div class="mb-3">
+                        <input id="txtBaslik" class="form-control" placeholder="Başlık..." required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea id="txtIcerik" class="form-control" rows="19" placeholder="İçerik..."></textarea>
+                    </div>
+                    <div>
+                        <button id="btnKaydet" type="submit" class="btn btn-primary btn-lg" style="--bs-btn-padding-x: 1.8rem;">Kaydet</button>
+                        <button id="btnSil" type="button" class="btn btn-danger btn-lg" style="--bs-btn-padding-x: 3rem;">Sil</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="bootstrap.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/ste.js"></script>
+</body>
+
+</html>
