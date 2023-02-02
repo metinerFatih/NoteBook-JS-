@@ -1,20 +1,17 @@
-$("body").css("background", "rgb(180, 201, 220)");
-
 let notlar = [
     {
-        baslik: "Alışveriş Listem",
+        baslik: "Alışveriş Listesi",
         icerik: "1. Havuç\n2. Ispanak"
     },
     {
         baslik: "İş Notlarım",
-        icerik: "1. Makale oku\n2. Raporları hazırla"
+        icerik: "1. Makale oku\n2. Çalış"
     },
     {
         baslik: "Güzel Sözler",
         icerik: "1. Vakit nakittir.\n2. Kendin ol."
     }
 ];
-
 let seciliNot = null;
 
 function listele() {
@@ -43,7 +40,6 @@ function ac(not) {
         else
             $(a).removeClass("active");
     });
-    //a.addClass("active");
     $("#txtBaslik").val(seciliNot.baslik);
     $("#txtIcerik").val(seciliNot.icerik);
 }
@@ -56,17 +52,17 @@ function kaydet(event) {
         seciliNot.icerik = $("#txtIcerik").val();
         listele();
         ac(seciliNot);
-        mesaj("Not başarılı bir şekilde kaydedildi.");
+        mesaj("Başarıyla kaydedildi.");
     }
     else {
         let yeniNot = {
             baslik: $("#txtBaslik").val(),
             icerik: $("#txtIcerik").val()
-        }
+        };
         notlar.push(yeniNot);
         listele();
         ac(yeniNot);
-        mesaj("Not başarılı bir şekilde oluşturuldu.");
+        mesaj("Not başarıyla oluşturuldu.");
     }
 }
 
@@ -79,7 +75,7 @@ function sil() {
         notlar.splice(i, 1);
         seciliNot = null;
         listele();
-        mesaj("Not başarılı bir şekilde silindi.");
+        mesaj("Başarıyla silindi.");
     }
 }
 
@@ -116,7 +112,7 @@ function mesaj(icerik) {
     });
 }
 
-$("#btnYeni").click(yeni);
+$(".btnYeni").click(yeni);
 $("#btnSil").click(sil);
 $("#frmNot").submit(kaydet);
 

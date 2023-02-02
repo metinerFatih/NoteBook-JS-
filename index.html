@@ -17,58 +17,45 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body">
-            <div>
-                <button id="btnYeni" class="btn btn-primary btn-lg" data-bs-dismiss="offcanvas" style="--bs-btn-padding-x: 2.9rem;">Yeni</button>
-            </div>
-            <div class="mt-3">
-                <div class="list-group notlar">
-                </div>
-            </div>
+            <button data-bs-dismiss="offcanvas" class="btnYeni btn btn-primary mb-3">Yeni</button>
+            <div class="list-group mb-3 notlar"></div>
         </div>
     </div>
-    <nav class="navbar navbar-dark navbar-expand-lg bg-secondary p-3">
+    <nav class="navbar navbar-dark bg-dark mb-4">
         <div class="container-fluid">
-            <ul class="navbar-nav me-3 d-lg-none">
+            <ul class="navbar-nav me-3 d-sm-none">
                 <li class="nav-item">
                     <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#cekmece">
                         <i class="fa-solid fa-bars fa-xl"></i>
                     </a>
                 </li>
             </ul>
-            <a class="navbar-brand text-white me-auto" href="#">
-                Not Defterim
-            </a>
+            <a class="navbar-brand me-auto" href="#">Not Defterim</a>
         </div>
     </nav>
-    <main class="p-4 mt-2 flex-grow-1">
-        <div class="row h-100">
-            <div class="col-lg-4 mb-4 d-none d-lg-block">
-                <div>
-                    <button id="btnYeni" class="btn btn-primary btn-lg" style="--bs-btn-padding-x: 2.9rem;">Yeni</button>
-                </div>
-                <div class="mt-3">
-                    <div class="list-group notlar">
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-lg-8 h-100">
+    <div class="container-md flex-grow-1">
+        <div class="row h-100">
+            <div class="col-sm-4 d-none d-sm-block">
+                <button class="btnYeni btn btn-primary mb-3">Yeni</button>
+                <div class="list-group mb-3 notlar"></div>
+            </div>
+            <div class="col-sm-8">
                 <form id="frmNot" class="h-100 d-flex flex-column" action="#">
                     <div class="mb-3">
-                        <input id="txtBaslik" class="form-control" placeholder="Başlık..." required>
+                        <input id="txtBaslik" type="text" class="form-control" placeholder="Başlık" required>
                     </div>
                     <div class="mb-3 flex-grow-1">
-                        <textarea id="txtIcerik" class="form-control h-100" rows="19" placeholder="İçerik..."></textarea>
+                        <textarea id="txtIcerik" class="form-control h-100" rows="15" placeholder="İçerik"></textarea>
                     </div>
-                    <div>
-                        <button id="btnKaydet" type="submit" class="btn btn-primary btn-lg" style="--bs-btn-padding-x: 1.8rem;">Kaydet</button>
-                        <button id="btnSil" type="button" class="btn btn-danger btn-lg" style="--bs-btn-padding-x: 3rem;">Sil</button>
+                    <div class="mb-3">
+                        <button id="btnKaydet" type="submit" class="btn btn-primary">Kaydet</button>
+                        <button id="btnSil" type="button" class="btn btn-danger">Sil</button>
                     </div>
                 </form>
             </div>
         </div>
-    </main>
-
+    </div>
 
     <script src="bootstrap.bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
